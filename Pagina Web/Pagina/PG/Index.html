@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenedor Perdido</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+       
+        <div class="logo">
+            <img src="../IMG/LOGO.jfif" alt="Logo">
+        </div>
+        <h1>El Tenedor Perdido</h1>
+    </header>
+
+        <form  id="ordenForm" method="post">
+            <h1>MESA</h1>
+            <label for="">Numero de Mesa:</label><br>
+            <input type="number" name="Mesa" id="Mesa" required>
+
+            <h1>Propina</h1>
+            <label for="">Cantidad (Valor decimal):</label><br>
+            <input type="number" name="Propina" id="Propina" step="0.01" placeholder="EJ: 20%=0.20">
+
+            <h1>Cliente</h1>
+            <label for="">Tipo de Cliente:</label><br>
+            <input type="text" name="Tipo_Cliente" id="Tipo" placeholder="Nuevo o Repetido">
+
+            <h1>Mesero</h1>
+            <label for="">Nombre Mesero:</label><br>
+            <input type="text" name="Nombre_Mesero" id="Nombre" required><br>
+        
+            <input type="submit" class="button" value="Guardar orden">
+
+        </form>
+
+
+    <script>
+        document.getElementById('ordenForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(this);
+            
+    
+            fetch('http://localhost:3000/orden', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+            
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

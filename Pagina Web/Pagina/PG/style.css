@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:  system-ui, "Lobster";  
+}
+body{
+    background-color:  rgb(155, 250, 208) ;
+}
+header{
+    background-color: deepskyblue;
+    height: 140px;
+    padding: 2%;
+    position: relative;
+    border-bottom: 15px solid black;
+    border-radius: 2px ;
+}
+.logo{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.logo img {
+    width: 60%;
+    border-radius: 40px;
+}
+header h1{
+    display: inline-block; 
+    margin-left: 40%; 
+    color: white; 
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+}
+.acciones{
+    background-color: grey;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.acciones button{
+    width: 60%;
+    margin:5% 20%;
+    padding: 3%;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+}
+.acciones button:hover{
+    background-color: orange;
+    box-shadow: 10px 10px 10px black;
+}
+form, .confirmar{
+    background-color: burlywood;
+    width: 40%;
+    margin: 2% 30%;
+    padding: 5%;
+    border-radius: 10px ;
+}
+form h1{
+    padding-bottom: 2%;
+    color: beige;
+}
+label{
+    font-size: 20px;
+}
+input{
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: burlywood;
+    border: none;
+    background-color: burlywood;
+    border-bottom: 2px solid black;
+    padding: 2%;
+}
+
+input[type='submit']{
+    background-color: cornflowerblue;
+    border: none;
+    margin-top: 10%;
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 15px;
+}
+.confirmar img{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+.confirmar h1{
+    text-align: center;
+}
+input[type='submit']:hover{
+    background-color: chocolate;
+    box-shadow: 10px 10px 10px cornflowerblue;
+}
+
